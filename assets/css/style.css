@@ -1,10 +1,78 @@
+/* Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+
 /* defaults */
 * {
     margin: 0;
 }
 
-:root {}
+:root {
+    /* Colors */
+    --primaryColor: #293163;
+    --InteractiveColor: #D34134;
+    --backgroundColor: #FCFDFF;
+    --textColor: #080a14;
+    --gradientColor: rgba(8, 10, 20, 0.35);
 
-h1, h2, h3, h4, h5, h6, p {
+    /* Distance */
+    --sectionDistanceDesktop: 50px;
+    --generalDistanceDesktop: 25px;
+
+    --sectionDistanceMobile: 25px;
+    --generalDistanceMobile: 15px;
+
+    /* Typography Weight */
+    --regularWeight: 400;
+    --semiBold: 600;
+    --boldWeight: 700;
+    --xBoldWeight: 800;
+}
+
+h1, h2, h3, h4, h5, h6, p, a{
     text-wrap: balance;
+    font-family: 'Mulish';
+}
+
+/* Navigation */
+nav{
+    background-color: var(--primaryColor);
+}
+    /* Mobile */
+    .mobileMenu{
+        height: 50px;
+    }
+
+    /* Desktop */
+
+/* -- */
+
+/* Footer */
+footer{
+    background-color: var(--primaryColor);
+    display: flex;
+    color: white;
+}
+i{
+    color: white;
+    font-size: 35px;
+}
+footer > img{
+    margin: var(--sectionDistanceMobile);
+}
+
+.hero{
+    background-image:
+        url("../img/pictures/ForsideHero.jpg");
+    height: 85px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hero h1{
+    color: white;
+    text-align: center;
 }
