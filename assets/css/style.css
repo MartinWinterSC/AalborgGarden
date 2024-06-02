@@ -6,6 +6,11 @@ body{
     overflow: hidden;
     margin: 0;
 }
+/* main */
+main{
+    margin-left: 5vw;
+    margin-right: 5vw;
+}
 
 :root {
     /* Colors */
