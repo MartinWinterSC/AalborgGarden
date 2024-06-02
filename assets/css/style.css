@@ -1,10 +1,15 @@
 /* Font Import */
 @import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
 
-
-/* defaults */
-* {
+/* Defaults */
+body{
+    overflow: hidden;
     margin: 0;
+}
+/* main */
+main{
+    margin-left: 5vw;
+    margin-right: 5vw;
 }
 
 :root {
@@ -33,37 +38,90 @@ h1, h2, h3, h4, h5, h6, p, a{
     text-wrap: balance;
     font-family: 'Mulish';
 }
+h1{
+    font-size: 2rem;
+    font-weight: var(--boldWeight)
+}
+h2{
+    font-size: 1.5rem;
+    font-weight: var(--boldWeight)
+}
+h3{
+    font-size: 1rem;
+    font-weight: var(--boldWeight)
+}
+p{
+    font-size: 1rem;
+    font-weight: var(--regularWeight)
+}
+
+/* Logo */
+.logo{
+    height: 70px;
+    margin: 5px;
+}
 
 /* Navigation */
 nav{
     background-color: var(--primaryColor);
+    height: 80px;
 }
-    /* Mobile */
-    .mobileMenu{
-        height: 50px;
-    }
-
-    /* Desktop */
-
-/* -- */
-
-/* Footer */
-footer{
+nav a{
+    color: white;
+    text-decoration: none;
+}
+#current{
+    text-decoration: underline 3px;
+    text-underline-offset: 10px;
+    border-radius: 10px;
+}
+nav img.logo{
+    margin-left: 5vw;
+}
+.mobileOpenMenu{
+    font-size: 50px;
+    position: absolute;
+    top: 10px;
+    right: 5vw;
+}
+.mobileCloseMenu{
+    font-size: 50px;
+    position: absolute;
+    top: 10px;
+    right: 5vw;
+    margin-right: 3.125px;
+    margin-left: 3.125px;
+    
+}
+.navPoints{
+    position: absolute;
+    top: 0;
+    right: 0;
     background-color: var(--primaryColor);
     display: flex;
-    color: white;
+    flex-direction: column;
+    width: 70vw;
+    transform: translate(100%);
+    transition: 300ms ease-in-out;
+    z-index: 3;
 }
-i{
-    color: white;
-    font-size: 35px;
+.jsMenuToggle{
+    transform: translate(0);
 }
-footer > img{
-    margin: var(--sectionDistanceMobile);
+.navPoints a{
+    font-size: 1.5rem;
+    font-weight: var(--regularWeight);
+    text-align: center;
+    padding-top: var(--sectionDistanceMobile);
+    padding-bottom: var(--sectionDistanceMobile);
+}
+.navPoints a:nth-child(2){
+    margin-top: 80px;
 }
 
+/* Hero */
 .hero{
-    background-image:
-        url("../img/pictures/ForsideHero.jpg");
+    background-image: url("../img/pictures/ForsideHero.jpg");
     height: 85px;
     background-repeat: no-repeat;
     background-size: cover;
@@ -71,14 +129,92 @@ footer > img{
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+}
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--gradientColor);
+    z-index: 1;
 }
 .hero h1{
     color: white;
     text-align: center;
+    z-index: 2;
+    position: relative;
 }
 
-/* main */
-main{
-    margin-left: 5vw;
-    margin-right: 5vw;
+/* Footer */
+footer{
+    background-color: var(--primaryColor);
+    color: white;
+    display: flex;
+    justify-content: space-between;
 }
+footer > img{
+    margin: 5px;
+}
+footer p{
+    font-size: 0.75rem;
+    margin: 5px;
+}
+.adresse{
+    display: flex;
+}
+i{
+    color: white;
+    font-size: 35px;
+    margin: 5px;
+}
+
+/* Media Queries */
+@media screen and (min-width: 900px) {
+    h1{
+        font-size: 3rem;
+    }
+    h2{
+        font-size: 2rem;
+    }
+    h3{
+        font-size: 1.5rem;
+    }
+    p{
+        font-size: 1.5rem;
+    }
+    footer p{
+        font-size: 1rem;
+    }
+    .navPoints a{
+        font-size: 1rem;
+    }
+    nav .mobileOpenMenu, nav .mobileCloseMenu {
+        display: none;
+    }
+    .navPoints{
+        transform: translateX(0);
+        width: unset;
+        display: flex;
+        flex-direction: row;
+        gap: 2vw;
+    }
+    .navPoints a:nth-child(2){
+        margin-top: unset;
+    }
+    .navPoints a:last-child{
+        margin-right: 5vw;
+    }
+}
+@media screen and (min-width: 400px) {
+    footer .logo{
+        margin-left: 5vw;
+    }
+    .soMe{
+        margin-right: 5vw;
+    }
+}
+/* @media screen and (min-width: 900px) {  
+} */
