@@ -163,13 +163,13 @@ nav img.logo{
     background-image: url("../img/hero/ArkivHero.jpg");
 }
 #ledelseHero{
-    background-image: url("../img/hero/.jpg");
+    background-image: url("../img/hero/LedelseHero.jpg");
 }
 #sponsorerHero{
     background-image: url("../img/hero/SponsorerHero.jpg");
 }
 #kalenderHero{
-    background-image: url("../img/hero/.jpg"); 
+    background-image: url("../img/hero/KalenderHero.jpg"); 
 }
 #frontPageH1{
     font-size: 2.5rem;
@@ -182,7 +182,7 @@ footer{
     display: flex;
     justify-content: space-between;
 }
-footer > img{
+footer .logo{
     margin: 5px;
 }
 footer p{
@@ -255,6 +255,11 @@ i{
     }
     #frontPageH1{
         font-size: 4rem;
+    }
+
+    /* Footer */
+    footer .logo{
+        height: 80px;
     }
 }
 @media screen and (min-width: 400px) {
