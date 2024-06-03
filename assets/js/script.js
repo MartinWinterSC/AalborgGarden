@@ -1,3 +1,4 @@
+// Mobile pop up menu
 const openMenu = document.querySelector(".mobileOpenMenu");
 const closeMenu = document.querySelector(".mobileCloseMenu");
 const navMenu = document.querySelector(".navPoints");
