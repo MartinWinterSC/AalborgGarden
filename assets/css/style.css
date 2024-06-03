@@ -21,11 +21,8 @@ main{
     --gradientColor: rgba(8, 10, 20, 0.35);
 
     /* Distance */
-    --sectionDistanceDesktop: 50px;
-    --generalDistanceDesktop: 25px;
-
-    --sectionDistanceMobile: 25px;
-    --generalDistanceMobile: 15px;
+    --sectionDistance: 25px;
+    --generalDistance: 15px;
 
     /* Typography Weight */
     --regularWeight: 400;
@@ -112,8 +109,8 @@ nav img.logo{
     font-size: 1.5rem;
     font-weight: var(--regularWeight);
     text-align: center;
-    padding-top: var(--sectionDistanceMobile);
-    padding-bottom: var(--sectionDistanceMobile);
+    padding-top: 25px;
+    padding-bottom: 25px;
 }
 .navPoints a:nth-child(2){
     margin-top: 80px;
@@ -121,7 +118,6 @@ nav img.logo{
 
 /* Hero */
 .hero{
-    background-image: url("../img/pictures/ForsideHero.jpg");
     height: 85px;
     background-repeat: no-repeat;
     background-size: cover;
@@ -147,6 +143,37 @@ nav img.logo{
     z-index: 2;
     position: relative;
 }
+#forsideHero{
+    background-image: url("../img/hero/ForsideHero.jpg");
+    height: 125px;
+}
+#omGardenHero{
+    background-image: url("../img/hero/OmGardenHero.jpg");
+}
+#bookingHero{
+    background-image: url("../img/hero/BookingHero.jpg");
+}
+#blivGardistHero{
+    background-image: url("../img/hero/BlivGardistHero.jpg");
+}
+#nyhederHero{
+    background-image: url("../img/hero/NyhederHero.jpg");
+}
+#arkivHero{
+    background-image: url("../img/hero/ArkivHero.jpg");
+}
+#ledelseHero{
+    background-image: url("../img/hero/.jpg");
+}
+#sponsorerHero{
+    background-image: url("../img/hero/SponsorerHero.jpg");
+}
+#kalenderHero{
+    background-image: url("../img/hero/.jpg"); 
+}
+#frontPageH1{
+    font-size: 2.5rem;
+}
 
 /* Footer */
 footer{
@@ -170,9 +197,14 @@ i{
     font-size: 35px;
     margin: 5px;
 }
+.soMeIcons{
+    display: flex;
+    justify-content: space-between;
+}
 
 /* Media Queries */
 @media screen and (min-width: 900px) {
+    /* Defaults */
     h1{
         font-size: 3rem;
     }
@@ -188,6 +220,8 @@ i{
     footer p{
         font-size: 1rem;
     }
+
+    /* Navigation */
     .navPoints a{
         font-size: 1rem;
     }
@@ -201,11 +235,26 @@ i{
         flex-direction: row;
         gap: 2vw;
     }
+    .navPoints a{
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
     .navPoints a:nth-child(2){
         margin-top: unset;
     }
     .navPoints a:last-child{
         margin-right: 5vw;
+    }
+
+    /* Hero */
+    .hero{
+        height: 300px;
+    }
+    #forsideHero{
+        height: 400px;
+    }
+    #frontPageH1{
+        font-size: 4rem;
     }
 }
 @media screen and (min-width: 400px) {
