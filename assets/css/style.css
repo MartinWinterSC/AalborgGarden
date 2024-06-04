@@ -2,9 +2,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
 
 /* Defaults */
-body{
-    overflow: hidden;
+*{
     margin: 0;
+}
+body{
+    /* overflow: hidden; */
+    /* margin: 0; */
 }
 /* main */
 main{
@@ -88,7 +91,6 @@ nav img.logo{
     right: 5vw;
     margin-right: 3.125px;
     margin-left: 3.125px;
-    
 }
 .navPoints{
     position: absolute;
@@ -197,7 +199,7 @@ i{
     font-size: 35px;
     margin: 5px;
 }
-.soMeIcons{
+footer .soMeContainer{
     display: flex;
     justify-content: space-between;
 }
