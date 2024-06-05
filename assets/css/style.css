@@ -6,8 +6,8 @@
     margin: 0;
 }
 body{
-    /* overflow: hidden; */
-    /* margin: 0; */
+    overflow-x: hidden;
+    margin: 0;
 }
 /* main */
 main{
@@ -182,8 +182,6 @@ button{
     background-color: var(--InteractiveColor);
     border: none;
     border-radius: 25px;
-    
-    
     font-weight: var(--xBoldWeight);
     padding: 10px 50px;
     cursor:pointer;
@@ -192,6 +190,16 @@ button a{
     text-decoration: none;
     color: white;
     font-size: 1rem;
+}
+
+/* Distances */
+main *{
+    margin-top: var(--generalDistance);
+    margin-bottom: var(--generalDistance);
+}
+section{
+    margin-top: var(--sectionDistance);
+    margin-bottom: var(--sectionDistance);
 }
 
 /* Footer */
@@ -274,6 +282,12 @@ footer .soMeContainer{
     }
     #frontPageH1{
         font-size: 4rem;
+    }
+
+    /* Main */
+    main{
+        margin-left: 10vw;
+        margin-right: 10vw;
     }
 
     /* Button */
