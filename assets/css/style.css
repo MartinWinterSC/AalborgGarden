@@ -182,12 +182,16 @@ button{
     background-color: var(--InteractiveColor);
     border: none;
     border-radius: 25px;
-    font-size: 1rem;
-    text-decoration: none;
-    color: white;
+    
+    
     font-weight: var(--xBoldWeight);
     padding: 10px 50px;
     cursor:pointer;
+}
+button a{
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
 }
 
 /* Footer */
@@ -274,8 +278,10 @@ footer .soMeContainer{
 
     /* Button */
     button{
-        font-size: 1.5rem;
         padding: 10px 60px;
+    }
+    button a{
+        font-size: 1.5rem;
     }
 
     /* Footer */
