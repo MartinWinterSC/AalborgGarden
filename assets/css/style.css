@@ -15,13 +15,23 @@ main{
     margin-right: 5vw;
 }
 
+/* Distances */
+main *{
+    margin-top: var(--generalDistance);
+    margin-bottom: var(--generalDistance);
+}
+section{
+    margin-top: var(--sectionDistance);
+    margin-bottom: var(--sectionDistance);
+}
+
 :root {
     /* Colors */
     --primaryColor: #293163;
     --InteractiveColor: #D34134;
     --backgroundColor: #FCFDFF;
     --textColor: #080a14;
-    --mutedTextColor: #535A80;
+    --mutedTextColor: #535a80;
     --gradientColor: rgba(8, 10, 20, 0.35);
 
     /* Distance */
@@ -41,20 +51,21 @@ h1, h2, h3, h4, h5, h6, p, a, button{
 }
 h1{
     font-size: 2rem;
-    font-weight: var(--boldWeight)
+    font-weight: var(--boldWeight);
 }
 h2{
     font-size: 1.5rem;
-    font-weight: var(--boldWeight)
+    font-weight: var(--boldWeight);
 }
 h3{
     font-size: 1rem;
-    font-weight: var(--boldWeight)
+    font-weight: var(--boldWeight);
 }
 p{
     font-size: 1rem;
     font-weight: var(--regularWeight);
-    color: var(--textColor)
+    color: var(--textColor);
+    line-height: 1.5rem;
 }
 
 /* Logo */
@@ -119,6 +130,9 @@ nav img.logo{
 .navPoints a:nth-child(2){
     margin-top: 80px;
 }
+header i{
+    color: white;
+}
 
 /* Hero */
 .hero{
@@ -180,13 +194,22 @@ nav img.logo{
 }
 
 /* Button */
+.buttonContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 button{
     background-color: var(--InteractiveColor);
     border: none;
     border-radius: 25px;
     font-weight: var(--xBoldWeight);
-    padding: 10px 50px;
-    cursor:pointer;
+    height: 40px;
+    width: 175px;
+    cursor: pointer;
+    margin-top: 0;
+    margin-bottom: 0;
+
 }
 button a{
     text-decoration: none;
@@ -194,15 +217,278 @@ button a{
     font-size: 1rem;
 }
 
-/* Distances */
-/* main *{
-    margin-top: var(--generalDistance);
+img{
+    margin: 0;
+}
+
+.desktopImg{
+    display: none;
+}
+/* index */
+/* fedt section */
+.fedt{
+    background-color: var(--primaryColor); 
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    transform: translate(-5vw);
+    width: 100vw;
+}
+.fedt p{
+    color: white;
+    font-weight: 700;
+    margin: 0;
+    line-height: 4rem;
+}
+.fedt span{
+    font-size: 4rem;
+    margin: 0;
+}
+.fedtContainer{
+    display: flex;
+    flex-direction: column;
+}
+.fedtContainer p{
+    display: inline-block;
+}
+
+/* Calender */
+.headerCentered{
+   text-align: center; 
+}
+.calender h3{
+    color: var(--mutedTextColor);
+}
+.calenderContainer article{
+    border-radius: 10px;
+    padding: var(--generalDistance);
+    display: flex;
+    box-shadow: 2px 2px 20px;
+}
+.calenderContainer article i{
+    color: var(--mutedTextColor);
+    font-size: 15px;
+}
+.dateContainer{
+    background-color: #D3D6DF;
+    padding: 15px;
+    border-radius: 5px;
+    min-width: 50px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.dateContainer p{
+    margin: 0;
+    text-align: center;
+}
+.weekday{
+    font-size: 1rem;
+    color: var(--mutedTextColor);
+}
+.date{
+    font-weight: var(--xBoldWeight);
+    font-size: 2rem;
+    color: var(--mutedTextColor);
+}
+.time p, .place p, .remark span{
+    color: var(--mutedTextColor);
+}
+.calenderContainer h4{
+    font-size: 1rem;
+}
+.time, .place{
+    display: flex;
+}
+.calender article *{
+    margin: 0;
+}
+.calenderContainer .eventInfoContainer{
+    margin-left: var(--generalDistance);
+}
+
+div.timePlaceContainer{
     margin-bottom: var(--generalDistance);
 }
-section{
-    margin-top: var(--sectionDistance);
-    margin-bottom: var(--sectionDistance);
-} */
+.timePlaceContainer p{
+    margin-left: 5px;
+}
+div.articleTitle{
+    margin-bottom: var(--generalDistance);
+}
+
+/* News */
+.news article{
+    box-shadow: 2px 2px 20px;
+    border-radius: 10px;
+    padding: var(--generalDistance);
+    display: flex;
+    align-items: center;
+}
+.news img{
+    border-radius: 5px;
+    height: 70px;
+    width: 70px;
+    object-fit: cover;
+}
+.newsInfo{
+    margin-left: var(--generalDistance);
+}
+.newsInfo p, .newsInfo h3{
+    margin: 0;
+    font-weight: var(--regularWeight);
+}
+.newsInfo p{
+    font-size: 0.75rem;
+    color: var(--mutedTextColor);
+}
+.newsImg{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Social Medias */
+div.soMeContainer{
+    display: flex;
+    justify-content: space-between;
+}
+main .soMeContainer i{
+    color: var(--InteractiveColor);
+    font-size: 50px;
+    margin: 0;
+}
+
+/* Focused Entry Points */
+.focusEntryPoints a{
+    text-decoration: none;
+}
+.entryPoint{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-radius: 10px;
+    padding: var(--generalDistance);
+}
+.entryPoint::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(83, 90, 128, 0.35);
+    z-index: 1;
+    border-radius: 10px;
+}
+.entryPoint i{
+    color: white;
+    font-size: 50px;
+    z-index: 2;
+    margin: 0;
+}
+.entryPoint p{
+    color: white;
+    text-align: center;
+    z-index: 2;
+    position: relative;
+    margin: 0;
+    font-weight: var(--boldWeight);
+}
+#omGardenFEP{
+    background-image: url("../img/hero/OmGardenHero.jpg");
+}
+#bookingFEP{
+    background-image: url("../img/hero/BookingHero.jpg");
+}
+#blivGardistFEP{
+    background-image: url("../img/hero/BlivGardistHero.jpg");
+}
+#korpseneFEP{
+    background-image: url("../img/");
+}
+#agHistorieFEP{
+    background-image: url("../img/");
+}
+
+/* Booking */
+.bookingIntro p{
+    font-weight: var(--boldWeight);
+}
+.contactInfo{
+    font-weight: var(--boldWeight);
+}
+.contactInfo span{
+    color: var(--InteractiveColor);
+    text-decoration: underline;
+}
+.fullBodyImg{
+    width: 90vw;
+}
+
+/* Bliv Gardist */
+.gardistsPrinciples{
+    font-weight: var(--semiBold);
+}
+.priceContainer h3{
+    margin-bottom: 10px;
+}
+.priceContainer p{
+    margin-top: 10px;
+}
+
+/* Nyhed Focused */
+.authorDateContainer{
+    display: flex;
+    gap: var(--generalDistance);
+}
+.authorDateContainer p{
+    margin: 0;
+}
+
+/* Ledelse */
+.ledelseContainer{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: var(--generalDistance);
+}
+.ledelseSuper img{
+    object-fit: cover;
+    object-position: center top;
+    width: 40vw;
+    height: 20vh;
+}
+.ledelseSuper p{
+    margin: 0;
+}
+.ledelseSuper h3{
+    height: 42px;
+    width: 40vw;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+.email{    
+    word-break: break-all;
+}
+
+/* Sponsorer */
+.sponsorInfo{
+    margin-bottom: 50px;
+}
+.sponsorInfo h2, .sponsorInfo p{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.sponsorInfo img{
+    object-fit: contain;
+    width: 90vw;
+}
 
 /* Footer */
 footer{
@@ -217,6 +503,8 @@ footer .logo{
 footer p{
     font-size: 0.75rem;
     margin: 5px;
+    color: white;
+    line-height: 1rem;
 }
 .adresse{
     display: flex;
@@ -229,6 +517,9 @@ footer i{
 footer .soMeContainer{
     display: flex;
     justify-content: space-between;
+}
+br{
+    margin: 0;
 }
 
 /* Media Queries */
@@ -248,6 +539,14 @@ footer .soMeContainer{
     }
     footer p{
         font-size: 1rem;
+    }
+
+    /* Image hider */
+    .desktopImg{
+        display: unset;
+    }
+    .mobileImg{
+        display: none;
     }
 
     /* Navigation */
@@ -313,98 +612,3 @@ footer .soMeContainer{
         margin-right: 5vw;
     }
 }
-
-/* index */
-/* fedt section */
-.fedt{
-    background-color: var(--primaryColor); 
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    transform: translate(-5vw);
-    width: 100vw;
-}
-.fedt p{
-    color: white;
-    font-weight: 700;
-    margin: 0;
-}
-.fedt span{
-    font-size: 4rem;
-    margin: 0;
-}
-.fedtContainer{
-    display: flex;
-    flex-direction: column;
-}
-.fedtContainer p{
-    display: inline-block;
-}
-
-/* Calender */
-.headerCentered{
-   text-align: center; 
-}
-
-.calenderContainer article{
-    border-radius: 10px;
-    padding: var(--generalDistance);
-    display: flex;
-    box-shadow: 2px 2px 20px;
-}
-
-.calenderContainer article i{
-    color: var(--mutedTextColor);
-    font-size: 15px;
-}
-
-.dateContainer{
-    background-color: #D3D6DF;
-    display: inline-block;
-    padding: 15px;
-    border-radius: 5px;
-    min-width: 50px;
-}
-.dateContainer p{
-    margin: 0;
-    text-align: center;
-}
-.weekday{
-    font-size: 1rem;
-    color: var(--mutedTextColor);
-}
-.date{
-    font-weight: var(--xBoldWeight);
-    font-size: 2rem;
-    color: var(--mutedTextColor);
-}
-
-.time p, .place p, .remark span{
-    color: var(--mutedTextColor);
-}
-
-.calenderContainer h4{
-    font-size: 1rem;
-}
-
-
-.time, .place{
-    display: flex;
-}
-
-/* Sponsorer start */
-main{
-    margin-top: var(--generalDistance);
-    margin-bottom: var(--generalDistance);
-}
-section{
-    margin-top: var(--sectionDistance);
-    margin-bottom: var(--sectionDistance);
-}
-
-.sponsorerNibe img, .norlysVækstpulje img, .antv img, .danKalk img, .olesensBusser img {
-    object-fit: contain;
-    width: 90vw;
-    height: 216px;
-}
-/* Sponsorer slut */
