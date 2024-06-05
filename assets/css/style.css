@@ -21,6 +21,7 @@ main{
     --InteractiveColor: #D34134;
     --backgroundColor: #FCFDFF;
     --textColor: #080a14;
+    --mutedTextColor: #535A80;
     --gradientColor: rgba(8, 10, 20, 0.35);
 
     /* Distance */
@@ -52,7 +53,8 @@ h3{
 }
 p{
     font-size: 1rem;
-    font-weight: var(--regularWeight)
+    font-weight: var(--regularWeight);
+    color: var(--textColor)
 }
 
 /* Logo */
@@ -193,14 +195,14 @@ button a{
 }
 
 /* Distances */
-main *{
+/* main *{
     margin-top: var(--generalDistance);
     margin-bottom: var(--generalDistance);
 }
 section{
     margin-top: var(--sectionDistance);
     margin-bottom: var(--sectionDistance);
-}
+} */
 
 /* Footer */
 footer{
@@ -219,7 +221,7 @@ footer p{
 .adresse{
     display: flex;
 }
-i{
+footer i{
     color: white;
     font-size: 35px;
     margin: 5px;
@@ -311,3 +313,98 @@ footer .soMeContainer{
         margin-right: 5vw;
     }
 }
+
+/* index */
+/* fedt section */
+.fedt{
+    background-color: var(--primaryColor); 
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    transform: translate(-5vw);
+    width: 100vw;
+}
+.fedt p{
+    color: white;
+    font-weight: 700;
+    margin: 0;
+}
+.fedt span{
+    font-size: 4rem;
+    margin: 0;
+}
+.fedtContainer{
+    display: flex;
+    flex-direction: column;
+}
+.fedtContainer p{
+    display: inline-block;
+}
+
+/* Calender */
+.headerCentered{
+   text-align: center; 
+}
+
+.calenderContainer article{
+    border-radius: 10px;
+    padding: var(--generalDistance);
+    display: flex;
+    box-shadow: 2px 2px 20px;
+}
+
+.calenderContainer article i{
+    color: var(--mutedTextColor);
+    font-size: 15px;
+}
+
+.dateContainer{
+    background-color: #D3D6DF;
+    display: inline-block;
+    padding: 15px;
+    border-radius: 5px;
+    min-width: 50px;
+}
+.dateContainer p{
+    margin: 0;
+    text-align: center;
+}
+.weekday{
+    font-size: 1rem;
+    color: var(--mutedTextColor);
+}
+.date{
+    font-weight: var(--xBoldWeight);
+    font-size: 2rem;
+    color: var(--mutedTextColor);
+}
+
+.time p, .place p, .remark span{
+    color: var(--mutedTextColor);
+}
+
+.calenderContainer h4{
+    font-size: 1rem;
+}
+
+
+.time, .place{
+    display: flex;
+}
+
+/* Sponsorer start */
+main{
+    margin-top: var(--generalDistance);
+    margin-bottom: var(--generalDistance);
+}
+section{
+    margin-top: var(--sectionDistance);
+    margin-bottom: var(--sectionDistance);
+}
+
+.sponsorerNibe img, .norlysVækstpulje img, .antv img, .danKalk img, .olesensBusser img {
+    object-fit: contain;
+    width: 90vw;
+    height: 216px;
+}
+/* Sponsorer slut */
