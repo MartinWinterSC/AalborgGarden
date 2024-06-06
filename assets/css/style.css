@@ -1,5 +1,26 @@
-/* Font Import */
+/* Font */
 @import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+h1, h2, h3, h4, h5, h6, p, a, button{
+    font-family: 'Mulish';
+}
+h1{
+    font-size: 2rem;
+    font-weight: var(--boldWeight);
+}
+h2{
+    font-size: 1.5rem;
+    font-weight: var(--boldWeight);
+}
+h3{
+    font-size: 1rem;
+    font-weight: var(--boldWeight);
+}
+p, li{
+    font-size: 1rem;
+    font-weight: var(--regularWeight);
+    color: var(--textColor);
+    line-height: 1.5rem;
+}
 
 /* Defaults */
 *{
@@ -9,10 +30,16 @@ body{
     overflow-x: hidden;
     margin: 0;
 }
-/* main */
 main{
     margin-left: 5vw;
     margin-right: 5vw;
+}
+
+.desktopImg{
+    display: none;
+}
+.fullBodyImg{
+    width: 100%;
 }
 
 /* Distances */
@@ -23,6 +50,9 @@ main *{
 section{
     margin-top: var(--sectionDistance);
     margin-bottom: var(--sectionDistance);
+}
+img{
+    margin: 0;
 }
 
 :root {
@@ -43,29 +73,6 @@ section{
     --semiBold: 600;
     --boldWeight: 700;
     --xBoldWeight: 800;
-}
-
-h1, h2, h3, h4, h5, h6, p, a, button{
-    /* text-wrap: balance; */
-    font-family: 'Mulish';
-}
-h1{
-    font-size: 2rem;
-    font-weight: var(--boldWeight);
-}
-h2{
-    font-size: 1.5rem;
-    font-weight: var(--boldWeight);
-}
-h3{
-    font-size: 1rem;
-    font-weight: var(--boldWeight);
-}
-p{
-    font-size: 1rem;
-    font-weight: var(--regularWeight);
-    color: var(--textColor);
-    line-height: 1.5rem;
 }
 
 /* Logo */
@@ -165,6 +172,9 @@ header i{
     background-image: url("../img/hero/ForsideHero.jpg");
     height: 125px;
 }
+#forsideHero h1{
+    font-size: 2.5rem;
+}
 #omGardenHero{
     background-image: url("../img/hero/OmGardenHero.jpg");
 }
@@ -189,15 +199,16 @@ header i{
 #kalenderHero{
     background-image: url("../img/hero/KalenderHero.jpg"); 
 }
-#frontPageH1{
-    font-size: 2.5rem;
-}
 
 /* Button */
 .buttonContainer{
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: var(--sectionDistance);
+}
+.buttonContainer a{
+    margin: 0;
 }
 button{
     background-color: var(--InteractiveColor);
@@ -209,155 +220,11 @@ button{
     cursor: pointer;
     margin-top: 0;
     margin-bottom: 0;
-
 }
-button a{
+a button{
     text-decoration: none;
     color: white;
     font-size: 1rem;
-}
-
-img{
-    margin: 0;
-}
-
-.desktopImg{
-    display: none;
-}
-/* index */
-/* fedt section */
-.fedt{
-    background-color: var(--primaryColor); 
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    transform: translate(-5vw);
-    width: 100vw;
-}
-.fedt p{
-    color: white;
-    font-weight: 700;
-    margin: 0;
-    line-height: 4rem;
-}
-.fedt span{
-    font-size: 4rem;
-    margin: 0;
-}
-.fedtContainer{
-    display: flex;
-    flex-direction: column;
-}
-.fedtContainer p{
-    display: inline-block;
-}
-
-/* Calender */
-.headerCentered{
-   text-align: center; 
-}
-.calender h3{
-    color: var(--mutedTextColor);
-}
-.calenderContainer article{
-    border-radius: 10px;
-    padding: var(--generalDistance);
-    display: flex;
-    box-shadow: 2px 2px 20px;
-}
-.calenderContainer article i{
-    color: var(--mutedTextColor);
-    font-size: 15px;
-}
-.dateContainer{
-    background-color: #D3D6DF;
-    padding: 15px;
-    border-radius: 5px;
-    min-width: 50px;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-.dateContainer p{
-    margin: 0;
-    text-align: center;
-}
-.weekday{
-    font-size: 1rem;
-    color: var(--mutedTextColor);
-}
-.date{
-    font-weight: var(--xBoldWeight);
-    font-size: 2rem;
-    color: var(--mutedTextColor);
-}
-.time p, .place p, .remark span{
-    color: var(--mutedTextColor);
-}
-.calenderContainer h4{
-    font-size: 1rem;
-}
-.time, .place{
-    display: flex;
-}
-.calender article *{
-    margin: 0;
-}
-.calenderContainer .eventInfoContainer{
-    margin-left: var(--generalDistance);
-}
-
-div.timePlaceContainer{
-    margin-bottom: var(--generalDistance);
-}
-.timePlaceContainer p{
-    margin-left: 5px;
-}
-div.articleTitle{
-    margin-bottom: var(--generalDistance);
-}
-
-/* News */
-.news article{
-    box-shadow: 2px 2px 20px;
-    border-radius: 10px;
-    padding: var(--generalDistance);
-    display: flex;
-    align-items: center;
-}
-.news img{
-    border-radius: 5px;
-    height: 70px;
-    width: 70px;
-    object-fit: cover;
-}
-.newsInfo{
-    margin-left: var(--generalDistance);
-}
-.newsInfo p, .newsInfo h3{
-    margin: 0;
-    font-weight: var(--regularWeight);
-}
-.newsInfo p{
-    font-size: 0.75rem;
-    color: var(--mutedTextColor);
-}
-.newsImg{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-/* Social Medias */
-div.soMeContainer{
-    display: flex;
-    justify-content: space-between;
-}
-main .soMeContainer i{
-    color: var(--InteractiveColor);
-    font-size: 50px;
-    margin: 0;
 }
 
 /* Focused Entry Points */
@@ -411,83 +278,10 @@ main .soMeContainer i{
     background-image: url("../img/hero/BlivGardistHero.jpg");
 }
 #korpseneFEP{
-    background-image: url("../img/");
+    background-image: url("../img/Generelt/musikkorps.jpg");
 }
 #agHistorieFEP{
-    background-image: url("../img/");
-}
-
-/* Booking */
-.bookingIntro p{
-    font-weight: var(--boldWeight);
-}
-.contactInfo{
-    font-weight: var(--boldWeight);
-}
-.contactInfo span{
-    color: var(--InteractiveColor);
-    text-decoration: underline;
-}
-.fullBodyImg{
-    width: 90vw;
-}
-
-/* Bliv Gardist */
-.gardistsPrinciples{
-    font-weight: var(--semiBold);
-}
-.priceContainer h3{
-    margin-bottom: 10px;
-}
-.priceContainer p{
-    margin-top: 10px;
-}
-
-/* Nyhed Focused */
-.authorDateContainer{
-    display: flex;
-    gap: var(--generalDistance);
-}
-.authorDateContainer p{
-    margin: 0;
-}
-
-/* Ledelse */
-.ledelseContainer{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: var(--generalDistance);
-}
-.ledelseSuper img{
-    object-fit: cover;
-    object-position: center top;
-    width: 40vw;
-    height: 20vh;
-}
-.ledelseSuper p{
-    margin: 0;
-}
-.ledelseSuper h3{
-    height: 42px;
-    width: 40vw;
-    margin-bottom: 0;
-    margin-top: 0;
-}
-.email{    
-    word-break: break-all;
-}
-
-/* Sponsorer */
-.sponsorInfo{
-    margin-bottom: 50px;
-}
-.sponsorInfo h2, .sponsorInfo p{
-    margin-top: 5px;
-    margin-bottom: 5px;
-}
-.sponsorInfo img{
-    object-fit: contain;
-    width: 90vw;
+    background-image: url("../img/Generelt/musikkorps.jpg");
 }
 
 /* Footer */
@@ -521,6 +315,267 @@ footer .soMeContainer{
 br{
     margin: 0;
 }
+/* Defaults end */
+
+/* index */
+/* fedt section */
+.fedt{
+    background-color: var(--primaryColor); 
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    transform: translate(-5vw);
+    width: 100vw;
+}
+.fedt p{
+    color: white;
+    font-weight: 700;
+    margin: 0;
+    line-height: 4rem;
+}
+.fedt span{
+    font-size: 4rem;
+    margin: 0;
+}
+.fedtContainer{
+    display: flex;
+    flex-direction: column;
+}
+.fedtContainer p{
+    display: inline-block;
+}
+
+/* Calendar */
+.headerCentered{
+   text-align: center; 
+}
+.calendar h3{
+    color: var(--mutedTextColor);
+}
+.calendarContainer article a{
+    border-radius: 10px;
+    padding: var(--generalDistance);
+    display: flex;
+    box-shadow: 2px 2px 20px;
+    text-decoration: none;
+    color: var(--textColor);
+}
+.calendarContainer article i{
+    color: var(--mutedTextColor);
+    font-size: 15px;
+}
+.dateContainer{
+    background-color: #D3D6DF;
+    padding: 15px;
+    border-radius: 5px;
+    min-width: 50px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.dateContainer p{
+    margin: 0;
+    text-align: center;
+}
+.weekday{
+    font-size: 1rem;
+    color: var(--mutedTextColor);
+}
+.date{
+    font-weight: var(--xBoldWeight);
+    font-size: 2rem;
+    color: var(--mutedTextColor);
+}
+.time p, .place p, .remark span{
+    color: var(--mutedTextColor);
+}
+.calendarContainer h4{
+    font-size: 1rem;
+}
+.time, .place{
+    display: flex;
+}
+.calendar article *{
+    margin: 0;
+}
+.calendarContainer .eventInfoContainer{
+    margin-left: var(--generalDistance);
+}
+
+div.timePlaceContainer{
+    margin-bottom: var(--generalDistance);
+}
+.timePlaceContainer p{
+    margin-left: 5px;
+}
+div.articleTitle{
+    margin-bottom: var(--generalDistance);
+}
+
+/* News */
+.news article a{
+    box-shadow: 2px 2px 20px;
+    border-radius: 10px;
+    padding: var(--generalDistance);
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--textColor);
+}
+.news img{
+    border-radius: 5px;
+    height: 70px;
+    width: 70px;
+    object-fit: cover;
+}
+.newsInfo{
+    margin-left: var(--generalDistance);
+}
+.newsInfo p, .newsInfo h3{
+    margin: 0;
+    font-weight: var(--regularWeight);
+}
+.newsInfo p{
+    font-size: 0.75rem;
+    color: var(--mutedTextColor);
+}
+.newsImg{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Social Medias */
+div.soMeContainer{
+    display: flex;
+    justify-content: space-between;
+}
+main .soMeContainer i{
+    color: var(--InteractiveColor);
+    font-size: 50px;
+    margin: 0;
+}
+/* Index end */
+
+/* Korpsene */
+.textContainer ul{
+    padding: 0;
+    margin: 0;
+}
+.textContainer li{
+    list-style: none;
+    margin: 0;
+}
+.listAttatch{
+    margin-bottom: 0;
+}
+.return{
+    margin-top: var(--sectionDistance);
+    margin-bottom: var(--sectionDistance);
+    display: none;
+}
+.return a{
+    display: flex;
+    align-items: center;
+    margin: 0;
+    text-decoration: none;
+}
+.return *{
+    margin: 0;
+    margin-right: 5px;
+    color: var(--textColor);
+}
+/* Korpsene End */
+
+/* Booking */
+.bookingIntro p{
+    font-weight: var(--boldWeight);
+}
+.contactInfo{
+    font-weight: var(--boldWeight);
+}
+.contactInfo span{
+    color: var(--InteractiveColor);
+    text-decoration: underline;
+}
+/* Booking end */
+
+/* Bliv Gardist */
+.gardistsPrinciples{
+    font-weight: var(--semiBold);
+}
+.priceContainer h3{
+    margin-bottom: 10px;
+}
+.priceContainer p{
+    margin-top: 10px;
+}
+/* Bliv Gardist End */
+
+/* Nyheder */
+.newsBig{
+    box-shadow: 2px 2px 20px;
+    border-radius: 10px;
+}
+.newsBig img{
+    border-radius: 10px 10px 0 0;
+}
+.newsBig a{
+    text-decoration: none;
+    color: var(--textColor);
+}
+/* Nyheder End */
+
+/* Nyhed Focused */
+.authorDateContainer{
+    display: flex;
+    gap: var(--generalDistance);
+}
+.authorDateContainer p{
+    margin: 0;
+}
+/* Nyhed Focused End */
+
+/* Ledelse */
+.ledelseContainer{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: var(--generalDistance);
+}
+.ledelseSuper img{
+    object-fit: cover;
+    object-position: center top;
+    width: 40vw;
+    height: 20vh;
+}
+.ledelseSuper p{
+    margin: 0;
+}
+.ledelseSuper h3{
+    height: 42px;
+    width: 40vw;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+.email{    
+    word-break: break-all;
+}
+/* Ledelse End */
+
+/* Sponsorer */
+.sponsorInfo{
+    margin-bottom: 50px;
+}
+.sponsorInfo h2, .sponsorInfo p{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.sponsorInfo img{
+    object-fit: contain;
+    width: 90vw;
+}
+/* Sponsorer End */
 
 /* Media Queries */
 @media screen and (min-width: 900px) {
@@ -539,6 +594,10 @@ br{
     }
     footer p{
         font-size: 1rem;
+    }
+    :root{
+        --sectionDistance: 50px;
+        --generalDistance: 25px;
     }
 
     /* Image hider */
@@ -602,6 +661,11 @@ br{
     /* Footer */
     footer .logo{
         height: 80px;
+    }
+
+    /* Korpsene */
+    .return{
+        display: unset;
     }
 }
 @media screen and (min-width: 400px) {
