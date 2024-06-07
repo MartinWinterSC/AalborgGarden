@@ -459,11 +459,11 @@ main .soMeContainer i{
 /* Index end */
 
 /* Korpsene */
-.textContainer ul{
+ul{
     padding: 0;
     margin: 0;
 }
-.textContainer li{
+li{
     list-style: none;
     margin: 0;
 }
@@ -520,10 +520,25 @@ main .soMeContainer i{
 }
 .newsBig img{
     border-radius: 10px 10px 0 0;
+    height: 200px;
+    object-fit: cover;
 }
 .newsBig a{
     text-decoration: none;
     color: var(--textColor);
+}
+.articleContent{
+    padding: var(--generalDistance);
+    margin: 0;
+}
+.articleContent p, .articleContent h2{
+    margin: 0;
+}
+p.readMore{
+    color: var(--primaryColor);
+    font-weight: var(--xBoldWeight);
+    text-align: center;
+    margin-top: var(--generalDistance);
 }
 /* Nyheder End */
 
@@ -536,6 +551,27 @@ main .soMeContainer i{
     margin: 0;
 }
 /* Nyhed Focused End */
+
+/* Archive */
+.archive h2{
+    text-align: center;
+}
+/* Archive */
+
+/* Gallery */
+    .galleryImgContainer{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+    .galleryImgContainer img{
+        width: 100%;
+    }
+/* Gallery */
+
+/* Placement */
+
+/* Placement End */
 
 /* Ledelse */
 .ledelseContainer{
@@ -576,6 +612,13 @@ main .soMeContainer i{
     width: 90vw;
 }
 /* Sponsorer End */
+
+/* Calendar */
+    .calendar h2{
+        text-align: center;
+        margin-top: var(--sectionDistance);
+    }
+/* Calendor End */
 
 /* Media Queries */
 @media screen and (min-width: 900px) {
