@@ -40,6 +40,7 @@ main{
 }
 .fullBodyImg{
     width: 100%;
+    object-fit: cover;
 }
 
 /* Distances */
@@ -93,7 +94,6 @@ nav a{
 #current{
     text-decoration: underline 3px;
     text-underline-offset: 10px;
-    border-radius: 10px;
 }
 nav img.logo{
     margin-left: 5vw;
@@ -220,14 +220,22 @@ button{
     cursor: pointer;
     margin-top: 0;
     margin-bottom: 0;
+    font-size: 1rem;
 }
 a button{
     text-decoration: none;
     color: white;
-    font-size: 1rem;
 }
 
 /* Focused Entry Points */
+.focusEntryPoints{
+    display: flex;
+    flex-direction: column;
+    gap: var(--generalDistance);
+}
+.focusEntryPoints *{
+    margin: 0px;
+}
 .focusEntryPoints a{
     text-decoration: none;
 }
@@ -296,9 +304,10 @@ footer .logo{
 }
 footer p{
     font-size: 0.75rem;
-    margin: 5px;
+    margin: 5px 5px 5px 0;
     color: white;
     line-height: 1rem;
+    align-items: center;
 }
 .adresse{
     display: flex;
@@ -315,10 +324,19 @@ footer .soMeContainer{
 br{
     margin: 0;
 }
+
+footer .logo{
+    margin-left: 5vw;
+}
+footer .soMe{
+    margin-right: 5vw;
+    margin-top: 5px;
+}
+
 /* Defaults end */
 
-/* index */
-/* fedt section */
+/* Index */
+/* Fedt */
 .fedt{
     background-color: var(--primaryColor); 
     display: flex;
@@ -360,9 +378,16 @@ br{
     text-decoration: none;
     color: var(--textColor);
 }
+.time, .place{
+    display: flex;
+    align-items: center;
+}
 .calendarContainer article i{
     color: var(--mutedTextColor);
-    font-size: 15px;
+    font-size: 1rem;
+    width: 1rem;
+    display: flex;
+    justify-content: center;
 }
 .dateContainer{
     background-color: #D3D6DF;
@@ -402,15 +427,11 @@ br{
 .calendarContainer .eventInfoContainer{
     margin-left: var(--generalDistance);
 }
-
-div.timePlaceContainer{
-    margin-bottom: var(--generalDistance);
-}
 .timePlaceContainer p{
     margin-left: 5px;
 }
 div.articleTitle{
-    margin-bottom: var(--generalDistance);
+    margin-bottom: 10px;
 }
 
 /* News */
@@ -430,6 +451,7 @@ div.articleTitle{
     object-fit: cover;
 }
 .newsInfo{
+    margin: 0;
     margin-left: var(--generalDistance);
 }
 .newsInfo p, .newsInfo h3{
@@ -456,6 +478,9 @@ main .soMeContainer i{
     font-size: 50px;
     margin: 0;
 }
+.soMeContainer *{
+    margin: 0;
+}
 /* Index end */
 
 /* Korpsene */
@@ -471,8 +496,6 @@ li{
     margin-bottom: 0;
 }
 .return{
-    margin-top: var(--sectionDistance);
-    margin-bottom: var(--sectionDistance);
     display: none;
 }
 .return a{
@@ -480,6 +503,7 @@ li{
     align-items: center;
     margin: 0;
     text-decoration: none;
+    margin-top: var(--sectionDistance);
 }
 .return *{
     margin: 0;
@@ -552,26 +576,49 @@ p.readMore{
 }
 /* Nyhed Focused End */
 
-/* Archive */
+/* Arkiv */
+.competitionRecent{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--generalDistance);
+}
 .archive h2{
     text-align: center;
 }
-/* Archive */
+/* Arkiv End */
 
-/* Gallery */
+/* Galleri */
     .galleryImgContainer{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
+        gap: var(--generalDistance);
     }
     .galleryImgContainer img{
         width: 100%;
+        height: 150px;
+        object-fit: cover;
     }
-/* Gallery */
+/* Galleri End */
 
-/* Placement */
+/* Album */
+.albumContainer{
+    display: grid;
+    gap: var(--generalDistance);
+}
+.albumContainer img{
+    height: 300px;
+}
+/* Album End */
 
-/* Placement End */
+/* Konkurrence Placeringer */
+.competitionContainerSuper{
+    display: grid;
+    gap: var(--generalDistance);
+}
+.competitionContainer img{
+    height: 90vw;
+}
+/* Konkurrence Placeringer End */
 
 /* Ledelse */
 .ledelseContainer{
@@ -582,15 +629,13 @@ p.readMore{
 .ledelseSuper img{
     object-fit: cover;
     object-position: center top;
-    width: 40vw;
-    height: 20vh;
+    width: 100%;
+    height: 50vw;
 }
 .ledelseSuper p{
     margin: 0;
 }
 .ledelseSuper h3{
-    height: 42px;
-    width: 40vw;
     margin-bottom: 0;
     margin-top: 0;
 }
@@ -609,7 +654,11 @@ p.readMore{
 }
 .sponsorInfo img{
     object-fit: contain;
-    width: 90vw;
+}
+
+.SponsorContainer{
+    display: grid;
+    gap: var(--generalDistance);
 }
 /* Sponsorer End */
 
@@ -620,6 +669,16 @@ p.readMore{
     }
 /* Calendor End */
 
+@media screen and (min-width: 500px) {
+    .articleDetails{
+        display: flex;
+        gap: var(--generalDistance);
+    }
+    div.soMeContainer{
+        justify-content: unset;
+        gap: 5vw;
+    }
+}
 /* Media Queries */
 @media screen and (min-width: 900px) {
     /* Defaults */
@@ -632,8 +691,12 @@ p.readMore{
     h3{
         font-size: 1.5rem;
     }
-    p{
+    .articleTitle h4{
         font-size: 1.5rem;
+    }
+    p, li{
+        font-size: 1.5rem;
+        line-height: 2rem;
     }
     footer p{
         font-size: 1rem;
@@ -643,15 +706,10 @@ p.readMore{
         --generalDistance: 25px;
     }
 
-    /* Image hider */
-    .desktopImg{
-        display: unset;
-    }
-    .mobileImg{
-        display: none;
-    }
-
     /* Navigation */
+    nav img.logo{
+        margin-left: 10vw;
+    }
     .navPoints a{
         font-size: 1rem;
     }
@@ -673,7 +731,7 @@ p.readMore{
         margin-top: unset;
     }
     .navPoints a:last-child{
-        margin-right: 5vw;
+        margin-right: 10vw;
     }
 
     /* Hero */
@@ -696,26 +754,309 @@ p.readMore{
     /* Button */
     button{
         padding: 10px 60px;
-    }
-    button a{
+        height: 80px;
+        width: 300px;
         font-size: 1.5rem;
+        border-radius: 40px;
     }
 
     /* Footer */
     footer .logo{
         height: 80px;
     }
+    footer .logo{
+        margin-left: 10vw;
+    }
+    footer .soMe{
+        margin-right: 10vw;
+        margin-top: 10px;
+    }
 
-    /* Korpsene */
+    /* Return */
     .return{
         display: unset;
     }
+
+    /* Focus Entry Points */
+    .focusEntryPoints{
+        display: grid;
+        gap: var(--generalDistance);
+    }
+    #indexFEP{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    #omGardenPageFEP{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Index */
+    /* Fedt */
+    .fedt{
+        transform: translate(-10vw);
+    }
+    .fedtContainer{
+        flex-direction: row;
+        gap: var(--generalDistance);
+    }
+    /* Calendar */
+    .articleDetails div:nth-child(2){
+        margin-top: 10px;
+    }
+    .calendarContainer article i{
+        font-size: 1.5rem;
+        width: 1.5rem;
+    }
+    /* News */
+    .news img{
+        height: 104px;
+        width: 104px;
+    }
+    .newsInfo p{
+        font-size: 1rem;
+    }
+    /* Index End */
+
+    /* Galleri */
+    .galleryImgContainer img{
+        height: 200px;
+    }
+    /* Galleri End */
+
+    /* Album */
+    .albumContainer{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .competitionContainer img{
+        height: 40vw;
+        object-fit: cover;
+    }
+    /* Album End */
+
+    /* Konkurrence Placeringer */
+    .competitionContainerSuper{
+        display: grid;
+        gap: var(--generalDistance);
+        grid-template-columns: repeat(2, 1fr);
+    }
+    /* Konkurrence Placeringer End */
+
+    /* Ledelse */
+    .ledelseSuper img{
+        height: 40vw;
+    }
+    /* Ledelse End */
+
+    .SponsorContainer{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .sponsorInfo img{
+        height: 20vw;
+    }
 }
-@media screen and (min-width: 400px) {
+
+@media screen and (min-width: 1200px) {
+    /* Main */
+    main{
+        margin-left: 15vw;
+        margin-right: 15vw;
+    }
+
+    /* Navigation */
+    nav img.logo{
+        margin-left: 15vw;
+    }
+    .navPoints a:last-child{
+        margin-right: 15vw;
+    }
+
+    /* Footer */
     footer .logo{
-        margin-left: 5vw;
+        margin-left: 15vw;
     }
     .soMe{
-        margin-right: 5vw;
+        margin-right: 15vw;
+    }
+
+    /* Image hider */
+    .desktopImg{
+        display: unset;
+    }
+    .mobileImg{
+        display: none;
+    }
+
+    /* Index */
+    .fedt{
+        transform: translate(-15vw);
+    }
+    .desktopDevider{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--generalDistance);
+    }
+    .articleDetails{
+        display: unset;
+        gap: var(--generalDistance);
+    }
+    section.calendar, section.news{
+        margin-top: 0;
+    }
+    section.calendar h2, section.news h2{
+        margin-top: 0;
+    }
+    /* Index End */
+
+    /* Calendar */
+    .calendarMain .calendarContainer{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--generalDistance);
+    }
+    .calendarMain .calendar{
+        margin-top: var(--sectionDistance);
+    }
+    .calendarContainer article{
+        margin: 0; 
+    } 
+    /* Calendar End*/
+
+    /* Om Garden */
+    .desktopLayout{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--generalDistance);
+    }
+    .desktopLayout p, .desktopLayout h2{
+        margin-top: 0;
+    }
+    .desktopImg{
+        margin-top: 0;
+    }
+    .desktopImg img{
+        height: 100%;
+        object-fit: cover;
+    }
+    .imgContainer{
+        gap: var(--generalDistance);
+        margin: 0;
+    }
+    .imgContainer .desktopImg img{
+        height: 50%;
+        margin-bottom: var(--generalDistance);
+    }
+    /* Om Garden End */
+
+    /* Korpsene */
+    .contentContainer{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--generalDistance);
+    }
+    .contentContainer img{
+        height: 100%;
+        object-fit: cover;
+    }
+    .textContainer{
+        display: flex;
+        flex-direction: column;
+        gap: var(--generalDistance);
+    }
+    .contentContainer .textContainer p, .textContainer, .textContainer h3{
+        margin: 0;
+    }
+    /* Korpsene End */
+
+    /* AG Historie */
+    .desktopImg{
+        margin: 0;
+    }
+    /* AG Historie End */
+
+    /* Booking */
+    .bookingText{
+        margin: 0;
+    }
+    p.contactInfo{
+        margin: 0;
+    }
+    p.contactInfo span{
+        margin: 0;
+    }
+    /* Booking End */
+
+    /* Bliv Gardist */
+    .priceContainer{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--generalDistance);
+    }
+    .priceContainer *{
+        margin: 0;
+        text-align: center;
+    }
+    /* Bliv Gardist End */
+
+    /* Undervisning */
+    .undervisningImg img{
+        height: 50%;
+    }
+    /* Undervisning End */
+
+    /* Nyheder */
+    section.nyhedContainer{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--generalDistance);
+    }
+    .newsBig{
+        margin: 0;
+    }
+    /* Nyheder End */
+    .imgContainer img{
+        height: 50%;
+    }
+    /* Nyhed Focused */
+
+    /* Arkiv */
+    .competitionRecent{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    /* Arkiv End */
+    
+    /* Galleri */
+    .galleryImgContainer{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .galleryImgContainer img{
+        height: 300px;
+    }
+    /* Galleri End */
+
+    /* Album */
+    .albumContainer{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    /* Album End */
+
+    /* Ledelse */
+    .ledelseContainer{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .ledelseSuper img{
+        height: 20vw;
+    }
+    /* Ledelse End*/
+
+    /* Sponsorer */
+    .SponsorContainer{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    /* Sponsorer End */
+}
+
+@media screen and (min-width: 1600px) {
+    .articleDetails{
+        display: flex;
+        /* gap: var(--generalDistance); */
     }
 }
