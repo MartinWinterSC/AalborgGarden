@@ -10,3 +10,16 @@ openMenu.addEventListener('click', () => {
 closeMenu.addEventListener('click', () => {
     navMenu.classList.remove("jsMenuToggle");
 });
+
+
+const baseURL = "https://aalborggarden.martinwinther.dk/wp-json/wp/v2/posts";
+const urlCategoryRecipe = "?categories=10";
+
+fetch(baseURL + urlCategoryRecipe)
+    .then((res) => res.json())
+    .then((posts) => {
+        console.log(posts);
+    })
+.catch((err) => {
+    console.error("Something went wrong, try again later", err);
+});
