@@ -65,6 +65,7 @@ img{
     --backgroundColor: #FCFDFF;
     --textColor: #080a14;
     --mutedTextColor: #535a80;
+    --highlightColor: #780B01;
     --gradientColor: rgba(8, 10, 20, 0.35);
 
     /* Distance */
@@ -223,6 +224,9 @@ button{
     margin-top: 0;
     margin-bottom: 0;
     font-size: 1rem;
+}
+button:hover{
+    background-color: var(--highlightColor)
 }
 a button{
     text-decoration: none;
@@ -480,6 +484,9 @@ main .soMeContainer i{
     font-size: 50px;
     margin: 0;
 }
+main .soMeContainer i:hover{
+    color: var(--highlightColor);
+}
 .soMeContainer *{
     margin: 0;
 }
@@ -539,6 +546,12 @@ li{
 }
 /* Bliv Gardist End */
 
+/* Undervisning */
+#undervisningImgHeight img{
+    height: 50vh;
+}
+/* Undervisning End*/
+
 /* Nyheder */
 .newsBig{
     box-shadow: 2px 2px 20px;
@@ -546,7 +559,7 @@ li{
 }
 .newsBig img{
     border-radius: 10px;
-    height: 10vw;
+    height: 20vw;
     object-fit: cover;
 }
 .newsBig a{
@@ -561,10 +574,17 @@ li{
     margin: 0;
 }
 p.readMore{
-    color: var(--primaryColor);
+    color: var(--InteractiveColor);
     font-weight: var(--xBoldWeight);
     text-align: center;
     margin-top: var(--generalDistance);
+}
+.desktopDevider p.readMore{
+    text-align: start;
+}
+p.readMore:hover{
+    color: var(--highlightColor);
+    font-weight: var(--xBoldWeight);
 }
 /* Nyheder End */
 
@@ -1069,7 +1089,7 @@ p.readMore{
     /* Bliv Gardist End */
 
     /* Undervisning */
-    .undervisningImg img{
+    #undervisningImgHeight img{
         height: 50%;
     }
     /* Undervisning End */
@@ -1084,12 +1104,12 @@ p.readMore{
         margin: 0;
     }
     .newsBig img{
-        width: 10vw;
     }
-    /* Nyheder End */
     .imgContainer img{
         height: 50%;
     }
+    /* Nyheder End */
+    
     /* Nyhed Focused */
 
     /* Arkiv */
