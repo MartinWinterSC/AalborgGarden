@@ -545,8 +545,8 @@ li{
     border-radius: 10px;
 }
 .newsBig img{
-    border-radius: 10px 10px 0 0;
-    height: 200px;
+    border-radius: 10px;
+    height: 10vw;
     object-fit: cover;
 }
 .newsBig a{
@@ -584,6 +584,25 @@ p.readMore{
     grid-template-columns: repeat(2, 1fr);
     gap: var(--generalDistance);
 }
+.competitionRecent a{
+    text-decoration: none;
+    color: var(--textColor);
+}
+.competitionRecent img{
+    height: 50vw;
+}
+
+.archiveCompetitionContainer a{
+    border-radius: 10px;
+    box-shadow: 2px 2px 20px;
+}
+
+.archiveCompetitionContainer h3{
+    padding: var(--generalDistance);
+    margin: 0;
+}
+
+
 .archive h2{
     text-align: center;
 }
@@ -599,6 +618,12 @@ p.readMore{
         width: 100%;
         height: 150px;
         object-fit: cover;
+    }
+    .competitionRecent h3{
+        margin-top: 0;
+    }
+    .competitionRecent a{
+        margin-top: 0;
     }
 /* Galleri End */
 
@@ -617,9 +642,10 @@ p.readMore{
     display: grid;
     gap: var(--generalDistance);
 }
-.competitionContainer img{
-    height: 90vw;
+.competitionContainer .logoContain{
+    object-fit: contain;
 }
+
 /* Konkurrence Placeringer End */
 
 /* Ledelse */
@@ -872,6 +898,9 @@ p.readMore{
         gap: var(--generalDistance);
         grid-template-columns: repeat(2, 1fr);
     }
+    .competitionContainerSuper .competitionContainer img{
+        height: 25vw;
+    }
     /* Konkurrence Placeringer End */
 
     /* Ledelse */
@@ -1033,6 +1062,10 @@ p.readMore{
         margin: 0;
         text-align: center;
     }
+    .blivGardistDesktop{
+        max-height: 25vw;
+    }
+
     /* Bliv Gardist End */
 
     /* Undervisning */
@@ -1050,6 +1083,9 @@ p.readMore{
     .newsBig{
         margin: 0;
     }
+    .newsBig img{
+        width: 10vw;
+    }
     /* Nyheder End */
     .imgContainer img{
         height: 50%;
@@ -1059,6 +1095,9 @@ p.readMore{
     /* Arkiv */
     .competitionRecent{
         grid-template-columns: repeat(3, 1fr);
+    }
+    .competitionRecent img{
+        height: 25vw;
     }
     /* Arkiv End */
     
