@@ -658,7 +658,7 @@ p.readMore{
     object-fit: contain;
 }
 
-.SponsorContainer{
+.sponsorContainer{
     display: grid;
     gap: var(--generalDistance);
 }
@@ -740,12 +740,44 @@ p.readMore{
     .hero{
         height: 300px;
     }
-    #forsideHero{
-        height: 400px;
-    }
     #frontPageH1{
         font-size: 4rem;
     }
+
+    #forsideHero{
+        background-image: url("../img/hero/heroLarge/ForsideHeroL.jpg");
+        height: 400px;
+    }
+    #forsideHero h1{
+        font-size: 2.5rem;
+    }
+    #omGardenHero{
+        background-image: url("../img/hero/heroLarge/OmGardenHeroL.jpg");
+    }
+    #bookingHero{
+        background-image: url("../img/hero/heroLarge/BookingHeroL.jpg");
+    }
+    #blivGardistHero{
+        background-image: url("../img/hero/heroLarge/BlivGardistHeroL.jpg");
+    }
+    #nyhederHero{
+        background-image: url("../img/hero/heroLarge/NyhederHeroL.jpg");
+    }
+    #arkivHero{
+        background-image: url("../img/hero/heroLarge/ArkivHeroL.jpg");
+    }
+    #ledelseHero{
+        background-image: url("../img/hero/heroLarge/LedelseHeroL.jpg");
+    }
+    #sponsorerHero{
+        background-image: url("../img/hero/heroLarge/SponsorerHeroL.jpg");
+    }
+    #kalenderHero{
+        background-image: url("../img/hero/heroLarge/KalenderHeroL.jpg")
+    }
+
+    
+    
 
     /* Main */
     main{
@@ -848,7 +880,7 @@ p.readMore{
     }
     /* Ledelse End */
 
-    .SponsorContainer{
+    .sponsorContainer{
         grid-template-columns: repeat(2, 1fr);
     }
     .sponsorInfo img{
@@ -1055,7 +1087,7 @@ p.readMore{
     /* Ledelse End*/
 
     /* Sponsorer */
-    .SponsorContainer{
+    .sponsorContainer{
         grid-template-columns: repeat(2, 1fr);
     }
     /* Sponsorer End */
