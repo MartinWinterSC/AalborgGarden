@@ -120,15 +120,15 @@ nav img.logo{
     top: 0;
     right: 0;
     background-color: var(--primaryColor);
-    display: flex;
+    display: none;
     flex-direction: column;
     width: 70vw;
-    transform: translate(100%);
+    /* transform: translate(100%); */
     transition: 300ms ease-in-out;
     z-index: 3;
 }
 .jsMenuToggle{
-    transform: translate(0);
+    display: flex;
 }
 .navPoints a{
     font-size: 1.5rem;
